@@ -25,6 +25,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           architecture: 'ppc64le'
-          check-latest: true
       - run: |
           java -version
