@@ -17,13 +17,16 @@ on:
 jobs:
   java-action-test:
     runs-on: ubuntu-20.04-ppc64le
+    strategy:
+      matrix:
+        java: [ '8', '11', '17' ]
     steps:
       - uses: actions/checkout@v3
       - name: Setup Adopt java
         uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
-          java-version: '17'
+          java-version: ${{ matrix.java }}
           architecture: 'ppc64le'
           check-latest: true
       - run: |
