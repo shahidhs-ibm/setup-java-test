@@ -22,10 +22,10 @@ jobs:
         java: [ '8', '11', '17' ]
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Adopt java
+      - name: Setup Temurin java
         uses: actions/setup-java@v3
         with:
-          distribution: 'adopt'
+          distribution: 'temurin'
           java-version: ${{ matrix.java }}
           architecture: 'ppc64le'
           check-latest: true
