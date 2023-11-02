@@ -14,7 +14,7 @@ on:
 
 jobs:
   java-action-test:
-    name: Setup Temurin java
+    name: Setup Semeru java
     runs-on: ubuntu-20.04-ppc64le
     steps:
       - name: Checkout
@@ -22,7 +22,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
+          distribution: 'semeru'
           java-version: '17'
           architecture: 'ppc64le'
       - name: Verify Java
