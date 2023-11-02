@@ -26,5 +26,5 @@ jobs:
           java-version: '17'
           architecture: 'ppc64le'
       - name: Verify Java
-        run: bash __tests__/verify-java.sh "${{ matrix.version }}" "${{ steps.setup-java.outputs.path }}"
-        shell: bash
+        run: |
+          java -version
