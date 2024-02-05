@@ -14,7 +14,7 @@ on:
 
 jobs:
   java-action-test:
-    runs-on: ubuntu-20.04-ppc64le
+    runs-on: ubuntu-22.04-ppc64le
     strategy:
       matrix:
         java: [ '8', '11', '17' ]
